@@ -10,8 +10,8 @@ import net.minecraft.client.gui.widget.SoundSliderWidget;
 import net.minecraft.client.option.GameOptions;
 import net.minecraft.client.option.Option;
 import net.minecraft.sound.SoundCategory;
-import net.minecraft.text.LiteralText;
 import net.minecraft.text.Text;
+import net.minecraft.text.TranslatableText;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
@@ -47,7 +47,7 @@ public class SoundOptionsScreenMixin extends GameOptionsScreen {
                 this.height / 6 - 12 + 22 * 5,
                 150,
                 20,
-                new LiteralText("Enderman Screams: " + (endermanVolume != 0 ? (int)(endermanVolume * 100) + "%" : "OFF")),
+                new TranslatableText("endermanshut.text.screams", new TranslatableText(endermanVolume != 0 ? (int)(endermanVolume * 100) + "%" : "endermanshut.text.coff")),
                 endermanVolume
         ));
         this.addDrawableChild(Option.SUBTITLES.createButton(this.gameOptions, this.width / 2 - 155, this.height / 6 - 12 + 22 * 6, 150));
@@ -56,7 +56,7 @@ public class SoundOptionsScreenMixin extends GameOptionsScreen {
                 this.height / 6 - 12 + 22 * 6,
                 150,
                 20,
-                new LiteralText("Ambient Screams: " + (turnOffScreams ? "On" : "Off")),
+                new TranslatableText("endermanshut.text.ambient", new TranslatableText(turnOffScreams ? "endermanshut.text.on" : "endermanshut.text.off")),
                 click -> {
                     turnOffScreams = !turnOffScreams;
                     this.clearChildren();
