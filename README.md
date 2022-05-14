@@ -1,2 +1,2 @@
-# enderman-shut
+# Enderman Sound Adjuster
  A Minecraft Fabric mod that separates enderman sounds into another slider, allowing their volume to be changed independently.
