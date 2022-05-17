@@ -8,8 +8,8 @@ import java.io.IOException;
 import java.nio.file.Files;
 
 public class ConfigInit {
-        public static double endermanVolume = 100D;
-        public static boolean turnOffScreams = true;
+        public static double endermanVolume = 1D;
+        public static boolean turnOffScreams = false;
         public static File configDir;
         public static File configFile;
         public static FileWriter configFileWriter;
