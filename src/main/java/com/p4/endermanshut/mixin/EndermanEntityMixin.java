@@ -1,6 +1,8 @@
 package com.p4.endermanshut.mixin;
 
 import net.minecraft.block.BlockState;
+import net.minecraft.client.MinecraftClient;
+import net.minecraft.client.option.GameOptions;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.mob.EndermanEntity;
 import net.minecraft.entity.mob.HostileEntity;
@@ -33,8 +35,8 @@ public class EndermanEntityMixin extends HostileEntity {
     public void onPlayAngrySound(CallbackInfo ci) {
         if (this.age >= this.lastAngrySoundAge + 400) {
             this.lastAngrySoundAge = this.age;
-            if (!this.isSilent()) {
-                this.world.playSound(this.getX(), this.getEyeY(), this.getZ(), SoundEvents.ENTITY_ENDERMAN_STARE, this.getSoundCategory(), (float) (2.5F * endermanVolume), 1.0F, false);
+            if (!this.isSilent() || endermanVolume != 0) {
+                this.world.playSound(this.getX(), this.getEyeY(), this.getZ(), SoundEvents.ENTITY_ENDERMAN_STARE, this.getSoundCategory(), (float) (1F * endermanVolume), 1.0F, false);
                 ci.cancel();
             }
         }
