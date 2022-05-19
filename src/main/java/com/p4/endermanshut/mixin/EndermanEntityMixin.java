@@ -66,6 +66,6 @@ public class EndermanEntityMixin extends HostileEntity {
     }
     @Inject(method = "getAmbientSound()Lnet/minecraft/sound/SoundEvent;", at = @At("HEAD"), cancellable = true)
     public void onGetAmbientSound(CallbackInfoReturnable<SoundEvent> cir) {
-        if (!turnOffScreams) cir.setReturnValue(SoundEvents.ENTITY_ENDERMAN_AMBIENT);
+        if (turnOffScreams) cir.setReturnValue(SoundEvents.ENTITY_ENDERMAN_AMBIENT);
     }
 }
