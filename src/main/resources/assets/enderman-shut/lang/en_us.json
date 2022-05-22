@@ -3,5 +3,8 @@
   "endermanshut.text.off": "OFF",
   "endermanshut.text.ambient": "Ambient Screams: %s",
   "endermanshut.text.screams": "Enderman Screams: %s",
-  "endermanshut.text.coff": "OFF"
+  "endermanshut.text.coff": "OFF",
+
+  "endermanshut.volume.success": "Set Enderman Screams volume to %s",
+  "endermanshut.ambient.success": "Changed Ambient Screams toggle to %s."
 }

@@ -63,7 +63,7 @@ public class SoundOptionsScreenMixin extends GameOptionsScreen {
                     this.init();
                 }));
         this.addDrawableChild(Option.AUDIO_DEVICE.createButton(this.gameOptions, this.width / 2 - 155, this.height / 6 - 12 + 22 * 7, 310));
-        k += 2;
+        //k += 2;
 
         this.addDrawableChild(new ButtonWidget(this.width / 2 - 100, this.height / 6 - 12 + 22 * 8, 200, 20, ScreenTexts.DONE, (button) -> {
             this.client.setScreen(this.parent);
